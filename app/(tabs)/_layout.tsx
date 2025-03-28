@@ -1,5 +1,5 @@
 import { Tabs } from 'expo-router';
-import { Home, Car, Bike } from 'lucide-react-native';
+import { Home, Car, Bike, User } from 'lucide-react-native';
 
 export default function TabLayout() {
   return (
@@ -39,6 +39,13 @@ export default function TabLayout() {
         options={{
           title: 'Bikes',
           tabBarIcon: ({ color, size }) => <Bike size={size} color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="profile"
+        options={{
+          title: 'Profile',
+          tabBarIcon: ({ color, size }) => <User size={size} color={color} />,
         }}
       />
     </Tabs>
